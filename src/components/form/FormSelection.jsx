@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 
-import CareersForm from "@/components/form/CareersForm";
-import Complaints from "@/components/form/ComplaintsForm";
-import ContactForm from "@/components/form/ContactForm";
-import SiteInspection from "@/components/siteInspection/Form";
+import ReportOfficerForm from "@/components/form/ReportOfficerForm";
+import GeneralQueryForm from "@/components/form/GeneralQueryForm";
+import SiteComplaintForm from "@/components/form/SiteComplaintForm";
+import JobApplyingForm from "@/components/form/JobApplyingForm";
 
 const FormSelection = () => {
   const [formValue, setFormValue] = useState(0);
@@ -17,17 +17,17 @@ const FormSelection = () => {
             <option selected disabled>
               Select Contact Criteria
             </option>
-            <option value="1">Report our company officer</option>
-            <option value="2">Applying for job</option>
-            <option value="3">General query</option>
-            <option value="4">Site complaints</option>
+            <option value="1">General query</option>
+            <option value="2">Report our company officer</option>
+            <option value="3">Site complaints</option>
+            {/* <option value="4">Applying for job</option> */}
           </select>
         </div>
       </div>
-      {formValue === "1" && <SiteInspection />}
-      {formValue === "2" && <CareersForm />}
-      {formValue === "3" && <ContactForm />}
-      {formValue === "4" && <Complaints />}
+      {formValue === "1" && <GeneralQueryForm />}
+      {formValue === "2" && <ReportOfficerForm />}
+      {formValue === "3" && <SiteComplaintForm />}
+      {/* {formValue === "4" && <JobApplyingForm />} */}
     </div>
   );
 };

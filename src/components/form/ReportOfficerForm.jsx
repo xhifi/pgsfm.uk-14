@@ -5,23 +5,27 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import LoadingSpinner from "../LoadingSpinner";
-import generalQuery from "@/actions/generalQuery";
+import submitFormAction from "@/actions/submitFormAction";
 
 const schema = z.object({
   name: z.string().min(2, { message: "Name is too short" }),
   phone: z.string().min(10, { message: "Phone number too short" }),
-  email: z.string().email({ message: "Invalid email address" }),
+  siteName: z.string().min(4, { message: "Site name is too short" }),
   address: z.string().min(10, { message: "Address too short" }),
   message: z.string().min(10, { message: "Message too short" }),
+  officerName: z.string().min(2, { message: "Officer name is too short" }),
+  officerSiaNumber: z.string(),
+  captcha: z.string(),
 });
 
-const ContactForm = () => {
+const ReportOfficerForm = () => {
   const [status, setStatus] = useState("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
   const {
     register,
     handleSubmit,
+
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
@@ -29,15 +33,14 @@ const ContactForm = () => {
   });
 
   const submit = async (data) => {
+    if (Boolean(data.captcha)) {
+      return setStatus("submitted");
+    }
+
     try {
       setStatus("loading");
-      const res = await generalQuery(data);
-      // const req = await fetch("http://localhost:3000/api/contact/general", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(data),
-      // });
-      // const res = await req.json();
+      const res = await submitFormAction("officer-complaint", data);
+
       if (res.message === "Message sent successfully") {
         setStatus("submitted");
       } else {
@@ -68,21 +71,6 @@ const ContactForm = () => {
         </div>
 
         <div className="form-part col mb-3">
-          <label className="form-label" htmlFor="email">
-            Email
-          </label>
-          <input
-            id="email"
-            type="text"
-            disabled={status === "loading" || status === "submitted"}
-            className={`form-control pg-input shadow ${errors.email ? "is-invalid" : ""} ${status === "submitted" ? "opacity-7" : ""}`}
-            {...register("email", { required: true })}
-          />
-          {errors.email && <small className="text-danger text-xs">{errors.email.message}</small>}
-        </div>
-      </div>
-      <div className="row row-cols-1 row-cols-md-2">
-        <div className="form-part col mb-3">
           <label className="form-label" htmlFor="phone">
             Phone
           </label>
@@ -94,6 +82,21 @@ const ContactForm = () => {
             {...register("phone", { required: true })}
           />
           {errors.phone && <small className="text-danger text-xs">{errors.phone.message}</small>}
+        </div>
+      </div>
+      <div className="row row-cols-1 row-cols-md-2">
+        <div className="form-part col mb-3">
+          <label className="form-label" htmlFor="site-name">
+            Inspection Site / Company Name
+          </label>
+          <input
+            id="site-name"
+            type="text"
+            disabled={status === "loading" || status === "submitted"}
+            className={`form-control pg-input shadow ${errors.phone ? "is-invalid" : ""} ${status === "submitted" ? "opacity-7" : ""}`}
+            {...register("siteName", { required: true })}
+          />
+          {errors.siteName && <small className="text-danger text-xs">{errors.siteName.message}</small>}
         </div>
         <div className="form-part col mb-3">
           <label className="form-label" htmlFor="address">
@@ -108,6 +111,49 @@ const ContactForm = () => {
           />
           {errors.address && <small className="text-danger text-xs">{errors.address.message}</small>}
         </div>
+      </div>
+      <div className="row row-cols-1 row-cols-md-2">
+        <div className="form-part col mb-3">
+          <label className="form-label" htmlFor="officer-name">
+            Officer Name
+          </label>
+          <input
+            id="officer-name"
+            type="text"
+            disabled={status === "loading" || status === "submitted"}
+            className={`form-control pg-input shadow ${errors.phone ? "is-invalid" : ""} ${status === "submitted" ? "opacity-7" : ""}`}
+            {...register("officerName", { required: true })}
+          />
+          {errors.officerName && <small className="text-danger text-xs">{errors.officerName.message}</small>}
+        </div>
+        <div className="form-part col mb-3">
+          <label className="form-label" htmlFor="officer-sia-number">
+            Office SIA Number
+          </label>
+          <input
+            id="officer-sia-number"
+            type="text"
+            disabled={status === "loading" || status === "submitted"}
+            className={`form-control pg-input shadow ${errors.address ? "is-invalid" : ""} ${status === "submitted" ? "opacity-7" : ""}`}
+            {...register("officerSiaNumber")}
+          />
+          {errors.officerSiaNumber !== "" ||
+            (errors.officerSiaNumber && <small className="text-danger text-xs">{errors.officerSiaNumber.message}</small>)}
+        </div>
+      </div>
+      <div className="mb-3 d-none">
+        <label className="form-label d-none" htmlFor="captcha">
+          1 + 2 = ?
+        </label>
+        <input
+          id="captcha"
+          disabled={status === "loading" || status === "submitted"}
+          className={`d-none form-control pg-input shadow ${errors.message ? "is-invalid" : ""} ${
+            status === "submitted" ? "opacity-7" : ""
+          }`}
+          type="text"
+          {...register("captcha")}
+        />
       </div>
       <div className="mb-3">
         <label className="form-label" htmlFor="message">
@@ -133,4 +179,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ReportOfficerForm;
