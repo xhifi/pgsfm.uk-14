@@ -1,0 +1,108 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "variables";
+@import "helpers";
+@import "navigation";
+@import "carousel";
+@import "service";
+@import "cta";
+@import "feature";
+@import "footer";
+@import "certificate";
+@import "accordion";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Saira", sans-serif;
+  font-weight: 600;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23838383' stroke-width='47.8' stroke-opacity='0.05' %3E%3Ccircle fill='%23FFFFFF' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23FFFFFF' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  // background-attachment: fixed;
+  background-size: cover;
+}
+
+.progress {
+  @extend .mb-1;
+  height: 20px;
+}
+
+.pg-input {
+  border-width: 3px;
+  border-color: transparent;
+  border-radius: 0.7rem;
+  &:focus {
+    @extend .shadow-none;
+    border: 3px solid $main-light;
+  }
+}
+.content-misv-0,
+.content-misv-1,
+.content-misv-2,
+.content-misv-3,
+.content-misv-4,
+.content-misv-5,
+.content-misv-6 {
+  @extend .mb-0, .ms-2;
+}
+
+.accordion-item {
+  &:nth-last-child(1) {
+    @extend .mb-2;
+  }
+}
+
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  .stamp-bg {
+    position: absolute;
+    bottom: -7%;
+    right: -7%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(200%);
+    img {
+      transform: rotate(-15deg);
+      filter: contrast(0.5) grayscale(100%) opacity(0.3);
+    }
+  }
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+.map-responsive {
+  height: 100%;
+}
+
+.spinner {
+  transform-origin: center;
+  animation: spinner_kf 0.75s infinite linear;
+}
+@keyframes spinner_kf {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.opacity-7 {
+  opacity: 0.7 !important;
+}
+
+.h-full {
+  height: 100% !important;
+}
+
+.w-full {
+  width: 100% !important;
+}
+.invert {
+  filter: grayscale(100%) invert(1);
+}

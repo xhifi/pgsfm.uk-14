@@ -1,0 +1,14 @@
+.accordion-button {
+  &:focus {
+  }
+  &:not(.collapsed) {
+    @extend .bg-main;
+  }
+  &::after {
+    filter: invert(1) grayscale(1);
+  }
+}
+.accordion-collapse {
+  @extend .text-main;
+  background-color: $green-100;
+}

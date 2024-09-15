@@ -1,0 +1,45 @@
+@import "../../../node_modules/swiper/swiper.scss";
+@import "../../../node_modules/swiper/swiper-bundle.min.css";
+
+.slide-inner {
+  span {
+    position: absolute;
+    z-index: -1;
+  }
+  .content {
+    min-height: 350px;
+    @extend .py-5, .text-light, .align-items-center, .text-start;
+    z-index: 1;
+    background: linear-gradient(90deg, black, rgba(0, 0, 0, 0));
+  }
+
+  .content-right {
+    @extend .py-5, .text-light, .align-items-center, .text-end;
+    z-index: 1;
+    background: linear-gradient(270deg, black, rgba(0, 0, 0, 0));
+  }
+  .content-center {
+    @extend .py-5, .text-light, .align-items-center, .text-center;
+    z-index: 1;
+    background: linear-gradient(0deg, black, rgba(0, 0, 0, 0));
+  }
+}
+.swiper-button-prev {
+  &:after {
+    @extend .p-1, .bg-main, .text-light, .rounded;
+  }
+}
+.swiper-button-next {
+  &:after {
+    @extend .p-1, .bg-main, .text-light, .rounded;
+  }
+}
+.swiper-pagination-bullet {
+  width: 25px;
+  border-radius: 0;
+  @extend .bg-main, .rounded;
+}
+.swiper-pagination-bullet-active {
+  width: 25px;
+  @extend .rounded;
+}

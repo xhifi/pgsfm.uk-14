@@ -1,0 +1,21 @@
+.nav-header {
+  @extend .container-fluid, .d-flex, .align-items-center, .justify-content-between, .py-2;
+  .brand-logo {
+    @extend.w-sm-100 !optional;
+  }
+  .btn-nav-special {
+    @extend .btn, .btn-sm, .btn-main;
+  }
+}
+
+.btn-hov-tst {
+  transition: all 0.5s linear;
+  &:hover {
+    transition: all 0.2s linear;
+    background-color: $main;
+    color: $fg-color;
+  }
+}
+.link-active {
+  @extend .bg-main;
+}
