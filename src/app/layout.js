@@ -35,7 +35,7 @@ export const metadata = {
     siteName: contactData.title,
     images: [
       {
-        url: contactData.logo.src,
+        url: contactData.og,
         width: 800,
         height: 600,
       },
@@ -47,7 +47,7 @@ export const metadata = {
     card: "summary_large_image",
     title: contactData.title,
     description: contactData.description,
-    images: [contactData.logo.src],
+    images: [contactData.og],
   },
 };
 
