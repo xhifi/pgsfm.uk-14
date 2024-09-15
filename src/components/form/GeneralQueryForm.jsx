@@ -1,19 +1,11 @@
 "use client";
 
-import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import LoadingSpinner from "../LoadingSpinner";
 import submitFormAction from "@/actions/submitFormAction";
-
-const schema = z.object({
-  name: z.string().min(2, { message: "Name is too short" }),
-  phone: z.string().min(10, { message: "Phone number too short" }),
-  email: z.string().email({ message: "Invalid email address" }),
-  address: z.string().min(10, { message: "Address too short" }),
-  message: z.string().min(10, { message: "Message too short" }),
-});
+import generalQuerySchema from "./schema/generalQuery";
 
 const GeneralQueryForm = () => {
   const [status, setStatus] = useState("idle");
@@ -24,7 +16,7 @@ const GeneralQueryForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: zodResolver(schema),
+    resolver: zodResolver(generalQuerySchema),
     mode: "onBlur",
   });
 
