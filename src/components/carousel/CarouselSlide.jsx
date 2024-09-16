@@ -29,6 +29,7 @@ const Slider = ({ data, center }) => {
                         <h1 className="">{slide.title}</h1>
                         <p className="text-xl">{slide.description}</p>
                         <Link className="btn btn-main btn-lg shadow-lg" href={slide.link.ref}>
+                          {slide.link.icon && <i className={`me-2 bi bi-${slide.link.icon}`} />}
                           {slide.link.text}
                         </Link>
                       </div>
@@ -39,6 +40,7 @@ const Slider = ({ data, center }) => {
                         <h1 className="">{slide.title}</h1>
                         <p>{slide.description}</p>
                         <Link className="btn btn-main btn-lg shadow-lg" href={slide.link.ref}>
+                          {slide.link.icon && <i className={`me-2 bi bi-${slide.link.icon}`} />}
                           {slide.link.text}
                         </Link>
                       </div>

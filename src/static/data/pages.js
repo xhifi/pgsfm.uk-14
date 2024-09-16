@@ -36,8 +36,9 @@ const data = [
         description:
           "We are a contractor and private company that provides security services to a wide range of industries. We are a team of reliable, dedicated and proud ambitions and offer a complete security guard services to our clients.",
         link: {
-          text: "Contact Us Today",
-          ref: "/contact",
+          icon: "whatsapp",
+          text: "Chat over WhatsApp",
+          ref: "https://wa.me/447888105705?text=Hi,%20I%20am%20interested%20in%20your%20services.%20Can%20we%20talk?",
         },
       },
       {
@@ -90,7 +91,7 @@ const data = [
           p: [
             "◉ We regularly update the sites we guard, do monthly administrative visits onsite and record officer data for any complaints.",
             "◉ We consider communication to be the paramount feature of our services. We keep you informed of any changes or updates that are made to your site.",
-            "◉ We work hard to protect you and your property from any harm that can be afflicted to it. We stand our guard when no one else does.",
+            "◉ We work tirelessly to protect you and your property from any potential harm that may befell it.",
             "◉ We are always available, around the clock, 24/7 to answer your calls and to respond you as soon as we can.",
             "◉ We charge competitive rates and provide the best services in the industry.",
           ],
@@ -114,7 +115,7 @@ const data = [
         heading: "Meeting the Industry Standards",
         content: [
           {
-            p: "We meet all the possible industry standards so that you can rely on us in the hour of need. We make sure that each and everything that is done for you is done right and by the books.",
+            p: "We carry out vetting process to recruit staff as per British standards so you can rely on us in the hour of need. We make sure that each and everything that is done for you is done right and by the books.",
           },
         ],
       },
@@ -127,10 +128,10 @@ const data = [
         ],
       },
       {
-        heading: "100% Satisfaction Guaranteed",
+        heading: "Satisfaction & Peace of Mind",
         content: [
           {
-            p: "If we don't meet your expectations, we don't expect you to pay. And we put it right at no charge, obviously, if your claims can be proved, we uphold our promise.",
+            p: "We strive to meet client-centered expectations and requirements. If any adjustments are requested by the client or officer, we promptly implement the necessary changes without delay.",
           },
         ],
       },
@@ -167,7 +168,7 @@ const data = [
         content: {
           h: "Welcome to Professional Guard Services Ltd.",
           p: [
-            "We are a privately owned and independent Security company based in the United Kingdom. We provide highly experienced SIA licensed security professionals throughout the United Kingdom. We are a team of reliable, dedicated and proud ambitions and offer a complete security guard services to our clients while offering static and mobile guards plus key holding and alarm response solutions.",
+            "We are a privately owned and independent Security company based in the United Kingdom. We provide highly experienced SIA licensed security professionals throughout the United Kingdom. We are a team of reliable, dedicated and proud ambitions and offer a complete security guard services to our clients.",
             "We are experienced in providing security guard services to anyone for whatever reason and currently support to many industrial aspects including corporate sector, construction sites, private events as well as many industrial warehouses etc. Whether you need a temporary cover or long-term solution to your security needs, we help you to protect your lives, businesses and properties from crime.",
           ],
         },
@@ -201,7 +202,7 @@ const data = [
         icon: "shield-shaded",
         content: [
           {
-            p: "Our exceptionally experienced uniformed and identifiable guards are always ready to meet the specific needs of your property while staying within your budget.",
+            p: "Our exceptionally experienced uniformed and identifiable guards are always ready to meet the client's needs & expectation at market competitive rate.",
           },
         ],
         ref: {
@@ -290,13 +291,13 @@ const data = [
         heading: "Construction",
         description:
           "Integrating wireless or hardwired construction site CCTV systems with full-reporting biometric access control turnstiles and fire alarms to properly protect your site as well as your workforce.",
-        icon: "wrench-adjustable",
+        icon: "building-fill",
       },
       {
         heading: "Vacant Property",
         description:
           "All the services landlords and property managers need to mitigate risks at vulnerable sites, and ensure insurance compliance – pro-actively, efficiently and cost-effectively.",
-        icon: "building",
+        icon: "building-fill-dash",
       },
       {
         heading: "Retail Businesses",
@@ -314,13 +315,7 @@ const data = [
       {
         heading: "Physical Security",
         image: ServiceElectronicSecurity,
-        list: [
-          "Personnel Protection",
-          "Corporate Protection & Security",
-          "Commercial Access Control Systems",
-          "Immediate Response Team",
-          "Periodic Ping Protocol",
-        ],
+        list: ["Door Supervisors", "Corporate Protection & Security", "Static Guarding", "Immediate Response Team", "Event Security"],
       },
       {
         heading: "Some Specialized Sectors",
