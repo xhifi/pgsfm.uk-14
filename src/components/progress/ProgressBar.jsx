@@ -10,6 +10,7 @@ const ProgressBar = ({ data }) => {
               <div
                 className="progress-bar progress-bar-striped bg-main"
                 role="progressbar"
+                aria-label={item.heading}
                 style={{ width: item.percent + "%" }}
                 aria-valuenow="25"
                 aria-valuemin="0"
