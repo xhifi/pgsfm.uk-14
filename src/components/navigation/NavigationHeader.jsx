@@ -5,8 +5,8 @@ import Brand from "@/static/images/brand.svg";
 const NavigationHeader = ({ phone, brand, title, link }) => {
   return (
     <div className="nav-header">
-      <Link href={link} passHref>
-        <Image alt={title} src={Brand} width={300} height={50} className="img-fluid h-auto" />
+      <Link href={link} style={{ width: 300 }} passHref>
+        <Image alt={title} src={Brand} width={300} height={50} className="img-fluid h-auto w-full" />
       </Link>
 
       <div>

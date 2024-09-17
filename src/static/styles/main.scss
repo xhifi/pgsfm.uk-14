@@ -103,6 +103,15 @@ body {
 .w-full {
   width: 100% !important;
 }
+
+.h-auto {
+  height: auto !important;
+}
+
+.w-auto {
+  width: auto !important;
+}
+
 .invert {
   filter: grayscale(100%) invert(1);
 }

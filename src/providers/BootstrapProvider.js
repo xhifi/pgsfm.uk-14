@@ -8,7 +8,7 @@ const BootstrapProvider = ({ children }) => {
     require("bootstrap/dist/js/bootstrap");
   });
 
-  return <div>{children}</div>;
+  return <>{children}</>;
 };
 
 export default BootstrapProvider;
