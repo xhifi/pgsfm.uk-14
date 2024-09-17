@@ -5,7 +5,7 @@ import FeatureSecurityGuard from "@/static/images/features/security-guard-uk.jpg
 import FeatureSecurityGuard2 from "@/static/images/features/security-uk-2.jpg";
 import FeatureSecurityGuard3 from "@/static/images/features/security-uk.jpg";
 import ServiceUniformedSecurity from "@/static/images/features/uniformed-security.jpg";
-import ServiceElectronicSecurity from "@/static/images/features/electronic-security.jpg";
+import ServicePhysicalSecurity2 from "@/static/images/features/physical-security.jpg";
 import ServicePhysicalSecurity from "@/static/images/features/physical-security.png";
 import ServiceCleaning from "@/static/images/features/cleaning.jpg";
 import CleaningContractedCleaning from "@/static/images/slides/contracted-cleaning.jpg";
@@ -314,7 +314,7 @@ const data = [
       },
       {
         heading: "Physical Security",
-        image: ServiceElectronicSecurity,
+        image: ServicePhysicalSecurity2,
         list: ["Door Supervisors", "Corporate Protection & Security", "Static Guarding", "Immediate Response Team", "Event Security"],
       },
       {
@@ -395,7 +395,7 @@ const data = [
         image: CleaningContractedCleaning,
         title: "Contracted Cleaning",
         description:
-          "We provide cleaning services to the masses such as big corporations, hospitals, schools and hotels etc. on contracted basis. We provide all contracted and regular cleaning services to the corporate sector. We also offer disaster cleaning as a service.",
+          "We are currently providing with contracted cleaning services to numerous hospitals, schools, and corporate buildings. Our contracted cleaning services are tailored to meet the specific needs of offices, corporate buildings, and warehouses. We ensure a spotless and hygienic environment, promoting productivity and well-being for your employees and visitors.",
         link: {
           text: "About Us",
           ref: "/about-us",
@@ -405,7 +405,7 @@ const data = [
         image: CleaningOnDemandCleaning,
         title: "On-Demand Cleaning",
         description:
-          "We are also available for on-demand cleaning as in, we will clean your site and fabric without any contract as well. You can just bring in or hire us for a one-time service.",
+          "If you require run-and-done cleaning services, we can provide you with on-demand cleaning services. We know, in corporate sector, there are times when you need cleaning services for a specific period of time and we are here to provide you with that. For example warehouse shifting, office shifting etc.",
         link: {
           text: "Our Services",
           ref: "/services",
@@ -413,9 +413,9 @@ const data = [
       },
       {
         image: CleaningOnSiteCleaning,
-        title: "On Site Cleaning",
+        title: "Cleaning with Peace of Mind",
         description:
-          "We specefically specialize in on-site cleaning and disaster cleaning. If you need us to specefically clean a warehouse or a building, regardless the cause, we will do it for you.",
+          "Our cleaning services are designed to provide you with peace of mind. We have a team of professionals who are always on the lookout for any suspicious activity. All our cleaning staff is purposefully vetted before hiring and job allocation. We make sure when you provide us with out of office hours cleaning rights, you get the safest possible notion of it.",
         link: {
           text: "Our Services",
           ref: "/services",

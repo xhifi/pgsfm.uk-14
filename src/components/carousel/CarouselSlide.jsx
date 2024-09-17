@@ -22,8 +22,9 @@ const Slider = ({ data, center }) => {
                 />
               </div>
               <div className="position-relative z-2 top-0 left-0 d-flex h-full">
+                <div className="position-absolute hero-gradient h-full w-full top-0 left-0 z-1" />
                 {center ? (
-                  <div className="px-md-5">
+                  <div className="px-md-5 position-relative z-2">
                     <div className="px-5 row h-full align-items-center text-white">
                       <div className="col text-center">
                         <h1 className="">{slide.title}</h1>
@@ -36,8 +37,8 @@ const Slider = ({ data, center }) => {
                     </div>
                   </div>
                 ) : (
-                  <div className="px-md-5">
-                    <div className=" px-5 row row-cols-1 row-cols-md-2 h-full align-items-center text-white">
+                  <div className="px-md-5 position-relative z-2">
+                    <div className="px-5 row text-center row-cols-1 text-lg-start row-cols-lg-2 h-full align-items-center text-white">
                       <div className="col">
                         <h1 className="">{slide.title}</h1>
                         <p>{slide.description}</p>

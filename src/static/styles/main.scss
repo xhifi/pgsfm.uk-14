@@ -115,3 +115,13 @@ body {
 .invert {
   filter: grayscale(100%) invert(1);
 }
+
+.hero-gradient {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@include media-breakpoint-up(lg) {
+  .hero-gradient {
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 200%);
+  }
+}

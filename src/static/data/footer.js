@@ -3,24 +3,24 @@ const data = [
     title: "Policy Statements",
     subjects: [
       {
+        link: "/privacy-policies/pgsfm-privacy-policy.pdf",
+        text: "Privacy Policy",
+      },
+      {
+        link: "/privacy-policies/pgsfm-data-protection-policy.pdf",
+        text: "Data Protection Policy",
+      },
+      {
         link: "/privacy-policies/pgsfm-health-and-safety-policy.pdf",
         text: "Health and Safety Policy",
       },
       {
         link: "/privacy-policies/pgsfm-business-ethics-policy.pdf",
-        text: "Business Ethics",
+        text: "Business Ethics Policy",
       },
       {
         link: "/privacy-policies/pgsfm-environmental-policy.pdf",
         text: "Environmental Policy",
-      },
-      {
-        link: "/privacy-policies/pgsfm-data-protection-policy.pdf",
-        text: "Data Protection",
-      },
-      {
-        link: "/privacy-policies/pgsfm-environmental-policy.pdf",
-        text: "Privacy Policy",
       },
     ],
   },
