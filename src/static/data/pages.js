@@ -52,7 +52,7 @@ const data = [
         },
       },
       {
-        image: Slide1,
+        image: ServicePhysicalSecurity2,
         title: "Serving Individuals and Companies in the whole United Kingdom",
         description:
           "We have been providing security services to a wide range of industries and individuals in the United Kingdom. We are a team of reliable, dedicated and proud ambitions and offer a complete security guard services to our clients.",

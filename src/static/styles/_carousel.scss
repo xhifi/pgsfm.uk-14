@@ -25,15 +25,43 @@
   }
 }
 .swiper-button-prev {
+  scale: 70%;
+  width: 52px;
+  height: 52px;
+  @extend .bg-main, .rounded-circle;
   &:after {
-    @extend .p-1, .bg-main, .text-light, .rounded;
+    @extend .p-3, .text-light, .rounded-circle;
+    font-size: 32px;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-52%, -50%);
   }
 }
 .swiper-button-next {
+  scale: 70%;
+  width: 52px;
+  height: 52px;
+  @extend .bg-main, .rounded-circle;
   &:after {
-    @extend .p-1, .bg-main, .text-light, .rounded;
+    @extend .p-3, .text-light, .rounded-circle;
+    font-size: 32px;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-48%, -50%);
   }
 }
+
+@include media-breakpoint-up(lg) {
+  .swiper-button-prev {
+    scale: 100%;
+  }
+  .swiper-button-next {
+    scale: 100%;
+  }
+}
+
 .swiper-pagination-bullet {
   width: 25px;
   border-radius: 0;

@@ -7,7 +7,7 @@ import Link from "@/components/Link";
 
 const Slider = ({ data, center }) => {
   return (
-    <Swiper navigation={true} modules={[Navigation, Pagination]} className="mySwiper">
+    <Swiper navigation={true} pagination={true} modules={[Navigation, Pagination]} className="mySwiper">
       {data.map((slide, i) => {
         return (
           <SwiperSlide key={i}>
