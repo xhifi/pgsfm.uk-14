@@ -6,7 +6,7 @@ const ServiceCard = ({ data }) => {
       <div className="col mb-4" key={i}>
         <div className="card h-100 border-0 shadow rounded-lg overflow-hidden">
           <div className="image-container d-block">
-            <Image src={v.image} className="w-full h-auto" alt={v.heading} />
+            <Image src={v.image} placeholder="blur" quality={25} className="w-full h-auto" alt={v.heading} />
           </div>
           <div className="card-body">
             <h5 className="card-title text-center">{v.heading}</h5>

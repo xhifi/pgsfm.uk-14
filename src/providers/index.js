@@ -1,15 +1,14 @@
 import BootstrapProvider from "./BootstrapProvider";
-import { Analytics } from "@vercel/analytics/react";
 import CrispProvider from "./CrispProvider";
+import Analytics from "./Analytics";
 
 const Providers = ({ children }) => {
   return (
-    <CrispProvider siteId={process.env.CRISP_WEBSITE_ID}>
-      <BootstrapProvider>
-        {children}
-        <Analytics />
-      </BootstrapProvider>
-    </CrispProvider>
+    <Analytics google={process.env.GOOGLE_ANALYTICS_ID}>
+      <CrispProvider siteId={process.env.CRISP_WEBSITE_ID}>
+        <BootstrapProvider>{children}</BootstrapProvider>
+      </CrispProvider>
+    </Analytics>
   );
 };
 
