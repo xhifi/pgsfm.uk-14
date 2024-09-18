@@ -9,7 +9,6 @@ import ProgressBar from "@/components/progress/ProgressBar";
 
 import getPageData from "@/utils/getPageData";
 
-import siteData from "@/static/data/siteData";
 const servicesData = getPageData("services");
 const homeData = getPageData();
 

@@ -3,8 +3,6 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/service/ServiceCard";
 import ServiceSprite from "@/components/service/ServiceSprite";
 import getPageData from "@/utils/getPageData";
-const aboutData = getPageData("about");
-const homeData = getPageData();
 const servicesData = getPageData("services");
 
 export const metadata = {
