@@ -17,6 +17,96 @@ const submitFormAction = async (type, formData) => {
   }
 
   try {
+    if (type === "job-application") {
+      const { authorization, characterReference, employerInfo, healthStatement, personalInfo, qualification } = formData;
+      console.log("job application form submitting");
+      mailResponse = await transport.sendMail({
+        from: email,
+        to: ["PGSFM SITE <info@pgsfm.uk>", personalInfo.email],
+        subject: `${typeTitle} - PGSFM SUBMISSION`,
+        html: `
+            <h3>Job Application</h3>
+            <h3>Applied for the position: ${personalInfo.roleAppliedFor}<h3>
+            
+            <hr />
+            <h2>Personal Information:</h2>
+            <p>
+            <b>Name:</b> ${personalInfo.name}<br />
+            <b>Phone:</b> ${personalInfo.phone}<br />
+            <b>Email:</b> ${personalInfo.email}<br />
+            <b>Date of Birth:</b> ${personalInfo.dob}<br />
+            <b>NI #</b> ${personalInfo.niNumber}<br />
+            <b>SIA #</b> ${personalInfo.siaNumber}<br />
+            <b>Address:</b> House: ${personalInfo.address.houseNumber} | Street: ${personalInfo.address.streetName} | Town: ${
+          personalInfo.address.town
+        } | Post Code: ${personalInfo.address.postCode} <br />
+            <b>Have you resided at the above address in last 5 years?</b> <span style="color: green; font-weight: bold;">${
+              personalInfo.address.fiveYearConsent
+            }</span><br />
+            <b>Addresses covering residence over last 5 years:</b> ${fiveYearBackground}<br />
+            </p>
+            <hr />
+            
+            
+            ${qualification.map(
+              (qual, index) => `
+              <h3>Qualification ${index + 1}</h3>
+              <p>
+                <b>Qualification ${index + 1}:</b> ${qual.qualification}<br />
+                <b>School:</b> ${qual.school}<br />
+                <b>Leaving Date:</b> ${qual.leavingDate}<br />
+              </p>
+              <hr />
+            `
+            )}
+            
+
+            
+            ${employerInfo.map(
+              (employer, index) => `
+              <h3>Employer ${index + 1}</h3>
+              <p>
+                <b>Employer Name:</b> ${employer.employerName}<br />
+                <b>Employer Address:</b> ${employer.employerAddress}<br />
+                <b>Employer Phone:</b> ${employer.employerPhone}<br />
+                <b>Employer Email:</b> ${employer.employerEmail}<br />
+                <b>Employment Start Date:</b> ${employer.employmentStartDate}<br />
+                <b>Employment End Date:</b> ${employer.employmentEndDate}<br />
+              </p>
+              <hr />
+            `
+            )}
+            
+            <h3>Character Reference:</h3>
+            <p>
+              <b>Details of someone you have known for at least 5 years:</b> ${characterReference.relativeInfo}<br />
+              <b>Self Employment Reference Name & Contact Details:</b> ${characterReference.selfEmploymentInfo}<br />
+              <b>UTR Number:</b> ${characterReference.utrNumber}<br />
+            </p>
+            <hr />
+
+            <h3>Consent of Background Check</h3>
+            <p>
+              <b>I authorize PGSFM to approach former employers, educational establishments, Government Departments and personal referees for verification of my career and employment/unemployment record. I understand that any documents I provide will be checked for authenticity using ultraviolet light. I hereby authorize PGSFM to make necessary enquiries about me including DBS and CCJ Checks:</b> <span style="color: green; font-weight: bold;">${authorization}</span>
+            </p>
+            <hr />
+
+            <h3>Health Statement</h3>
+            <p>
+              <b>I am physically fit with no medical conditions which would prevent me from performing the role of a security operative fit:</b> <span style="color: green; font-weight: bold;">${
+                healthStatement.physicallyFit
+              }</span><br />
+              <b>If you chose "I do not confirm", please state all medical issues which can impact your ability to perform the roles of a security operative:</b> ${
+                healthStatement.medicalDetails
+              }
+            </p>
+            <br />
+            <br />
+            <p><b>Submitted On:</p> <span>${Date.now().toLocaleString()}</span></p>
+          `,
+      });
+    }
+
     if (type === "officer-complaint") {
       console.log("officer complaint form submitting");
       mailResponse = await transport.sendMail({
@@ -36,6 +126,7 @@ const submitFormAction = async (type, formData) => {
           `,
       });
     }
+
     if (type === "site-complaint") {
       console.log("site complaint form submitting");
       mailResponse = await transport.sendMail({

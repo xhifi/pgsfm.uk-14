@@ -20,14 +20,14 @@ const FormSelection = () => {
             <option value="1">General query</option>
             <option value="2">Report our company officer</option>
             <option value="3">Site complaints</option>
-            {/* <option value="4">Applying for job</option> */}
+            <option value="4">Applying for job</option>
           </select>
         </div>
       </div>
       {formValue === "1" && <GeneralQueryForm />}
       {formValue === "2" && <ReportOfficerForm />}
       {formValue === "3" && <SiteComplaintForm />}
-      {/* {formValue === "4" && <JobApplyingForm />} */}
+      {formValue === "4" && <JobApplyingForm />}
     </div>
   );
 };
