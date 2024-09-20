@@ -21,8 +21,8 @@ const submitFormAction = async (type, formData) => {
       const { authorization, characterReference, employerInfo, healthStatement, personalInfo, qualification } = formData;
       console.log("job application form submitting");
       mailResponse = await transport.sendMail({
-        from: email,
-        to: ["PGSFM SITE <info@pgsfm.uk>", personalInfo.email],
+        from: "PGSFM SITE <info@pgsfm.uk>",
+        to: ["info@pgsfm.uk", personalInfo.email],
         subject: `${typeTitle} - PGSFM SUBMISSION`,
         html: `
             <h3>Job Application</h3>
@@ -43,7 +43,7 @@ const submitFormAction = async (type, formData) => {
             <b>Have you resided at the above address in last 5 years?</b> <span style="color: green; font-weight: bold;">${
               personalInfo.address.fiveYearConsent
             }</span><br />
-            <b>Addresses covering residence over last 5 years:</b> ${fiveYearBackground}<br />
+            <b>Addresses covering residence over last 5 years:</b> ${personalInfo.address.fiveYearBackground}<br />
             </p>
             <hr />
             
@@ -52,9 +52,9 @@ const submitFormAction = async (type, formData) => {
               (qual, index) => `
               <h3>Qualification ${index + 1}</h3>
               <p>
-                <b>Qualification ${index + 1}:</b> ${qual.qualification}<br />
-                <b>School:</b> ${qual.school}<br />
-                <b>Leaving Date:</b> ${qual.leavingDate}<br />
+                <b>Qualification:</b> ${qual.qualification || ""}<br />
+                <b>School:</b> ${qual.school || ""}<br />
+                <b>Leaving Date:</b> ${qual.leavingDate || ""}<br />
               </p>
               <hr />
             `
@@ -93,16 +93,18 @@ const submitFormAction = async (type, formData) => {
 
             <h3>Health Statement</h3>
             <p>
-              <b>I am physically fit with no medical conditions which would prevent me from performing the role of a security operative fit:</b> <span style="color: green; font-weight: bold;">${
-                healthStatement.physicallyFit
-              }</span><br />
+              <b>I am physically fit with no medical conditions which would prevent me from performing the role of a security operative fit:</b> <span style="color: ${
+                healthStatement.physicallyFit === "I don't confirm" ? "red" : "green"
+              }; font-weight: bold;">${healthStatement.physicallyFit}</span><br />
               <b>If you chose "I do not confirm", please state all medical issues which can impact your ability to perform the roles of a security operative:</b> ${
                 healthStatement.medicalDetails
               }
             </p>
             <br />
             <br />
-            <p><b>Submitted On:</p> <span>${Date.now().toLocaleString()}</span></p>
+            <p><b>Submitted On: <span>${new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "long", year: "numeric" }).format(
+              Date.now()
+            )}</span></p>
           `,
       });
     }
@@ -110,8 +112,8 @@ const submitFormAction = async (type, formData) => {
     if (type === "officer-complaint") {
       console.log("officer complaint form submitting");
       mailResponse = await transport.sendMail({
-        from: email,
-        to: "PGSFM SITE <info@pgsfm.uk>",
+        from: "PGSFM SITE <info@pgsfm.uk>",
+        to: "info@pgsfm.uk",
         subject: `${typeTitle} - SITE SUBMISSION`,
         html: `
             <h3>Officer Complaint</h3>
@@ -130,8 +132,8 @@ const submitFormAction = async (type, formData) => {
     if (type === "site-complaint") {
       console.log("site complaint form submitting");
       mailResponse = await transport.sendMail({
-        from: email,
-        to: "PGSFM SITE <info@pgsfm.uk>",
+        from: "PGSFM SITE <info@pgsfm.uk>",
+        to: "info@pgsfm.uk",
         subject: `${typeTitle} - SITE SUBMISSION`,
         html: `
             <h3>Site Complaint</h3>
@@ -149,8 +151,8 @@ const submitFormAction = async (type, formData) => {
     if (type === "general") {
       console.log("general form submitting");
       mailResponse = await transport.sendMail({
-        from: email,
-        to: "PGSFM SITE <info@pgsfm.uk>",
+        from: "PGSFM SITE <info@pgsfm.uk>",
+        to: "info@pgsfm.uk",
         subject: `${typeTitle} - SITE SUBMISSION`,
         html: `
             <h3>General Inquiry</h3>

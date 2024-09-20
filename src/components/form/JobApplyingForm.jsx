@@ -79,10 +79,10 @@ const ReportOfficerForm = () => {
         medicalDetails: data.medicalDetails,
       },
     };
-
+    console.log(vals);
     try {
       setStatus("loading");
-      const res = await submitFormAction("job-application", data);
+      const res = await submitFormAction("job-application", vals);
 
       if (res.message === "Message sent successfully") {
         setStatus("submitted");
