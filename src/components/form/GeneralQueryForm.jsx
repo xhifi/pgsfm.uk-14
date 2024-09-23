@@ -98,7 +98,7 @@ const GeneralQueryForm = () => {
       </div>
       <div className="mb-3">
         <label className="form-label" htmlFor="message">
-          Issue Description
+          Description
         </label>
         <textarea
           id="message"

@@ -5,7 +5,7 @@ import transport from "@/utils/nodemailer";
 const types = ["general", "job-application", "officer-complaint", "site-complaint"];
 
 const submitFormAction = async (type, formData) => {
-  const { name, phone, email, address, message, siteName, officerSiaNumber, officerName } = formData;
+  const { name, phone, email, address, message, siteName, officerSiaNumber, officerName, designation } = formData;
   let mailResponse = null;
   const typeTitle = type
     .split("-")
@@ -120,7 +120,8 @@ const submitFormAction = async (type, formData) => {
             <p>Name: ${name}<br />
             Phone: ${phone}<br />
             Site Address: ${address}<br />
-            Site Name: ${siteName}</p>
+            Site Name: ${siteName}<br />
+            Designation: ${designation}</p>
             <hr />
             <p>Against Officer: ${officerName}<br />
             Officer SIA Number: ${officerSiaNumber}<br />

@@ -94,7 +94,7 @@ const ReportOfficerForm = () => {
       <div className="row row-cols-1 row-cols-md-2">
         <div className="form-part col mb-3">
           <label className="form-label" htmlFor="site-name">
-            Inspection Site / Company Name
+            Company Name
           </label>
           <input
             id="site-name"
@@ -107,7 +107,7 @@ const ReportOfficerForm = () => {
         </div>
         <div className="form-part col mb-3">
           <label className="form-label" htmlFor="address">
-            Inspection Site Address
+            Site Address
           </label>
           <input
             id="address"
@@ -135,7 +135,7 @@ const ReportOfficerForm = () => {
       </div>
       <div className="mb-3">
         <label className="form-label" htmlFor="message">
-          Issue Description
+          Description
         </label>
         <textarea
           id="message"

@@ -532,8 +532,8 @@ const ReportOfficerForm = () => {
           <p className="mb-1">
             I hereby authorize PGSFM to approach former employers, educational establishments, Government Departments and personal referees
             for verification of my career and employment/unemployment record. I understand that any documents I provide will be checked for
-            authenticity using ultraviolet light. I hereby authorize Umbrella Security to make necessary enquiries about me including DBS
-            and CCJ Checks.*
+            authenticity with relevant departments. I hereby authorize PGSFM to do necessary credit checks about me including and CCJ
+            Checks.*
           </p>
           <label htmlFor="authorizeYes">
             <input

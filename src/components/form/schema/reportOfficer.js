@@ -8,6 +8,7 @@ const reportOfficerSchema = z.object({
   message: z.string().min(10, { message: "Message too short" }),
   officerName: z.string().min(2, { message: "Officer name is too short" }),
   officerSiaNumber: z.string(),
+  designation: z.string().min(2, { message: "Officer name is too short" }),
   captcha: z.string(),
 });
 

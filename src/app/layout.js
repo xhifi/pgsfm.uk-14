@@ -1,5 +1,6 @@
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Saira } from "next/font/google";
 const open_sans = Open_Sans({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800"], variable: "--font-sans" });
+const saira = Saira({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800"], variable: "--font-serif" });
 
 import "@/static/styles/main.scss";
 
@@ -55,7 +56,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${open_sans.className}`}>
+      <body className={`${saira.variable} ${open_sans.className}`}>
         <Providers>
           <Navigation />
           {children}

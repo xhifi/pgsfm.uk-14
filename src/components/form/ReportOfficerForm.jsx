@@ -76,20 +76,20 @@ const ReportOfficerForm = () => {
       <div className="row row-cols-1 row-cols-md-2">
         <div className="form-part col mb-3">
           <label className="form-label" htmlFor="site-name">
-            Inspection Site / Company Name
+            Company Name
           </label>
           <input
             id="site-name"
             type="text"
             disabled={status === "loading" || status === "submitted"}
-            className={`form-control pg-input shadow ${errors.phone ? "is-invalid" : ""} ${status === "submitted" ? "opacity-7" : ""}`}
+            className={`form-control pg-input shadow ${errors.siteName ? "is-invalid" : ""} ${status === "submitted" ? "opacity-7" : ""}`}
             {...register("siteName", { required: true })}
           />
           {errors.siteName && <small className="text-danger text-xs">{errors.siteName.message}</small>}
         </div>
         <div className="form-part col mb-3">
           <label className="form-label" htmlFor="address">
-            Inspection Site Address
+            Site Address
           </label>
           <input
             id="address"
@@ -110,7 +110,9 @@ const ReportOfficerForm = () => {
             id="officer-name"
             type="text"
             disabled={status === "loading" || status === "submitted"}
-            className={`form-control pg-input shadow ${errors.phone ? "is-invalid" : ""} ${status === "submitted" ? "opacity-7" : ""}`}
+            className={`form-control pg-input shadow ${errors.officerName ? "is-invalid" : ""} ${
+              status === "submitted" ? "opacity-7" : ""
+            }`}
             {...register("officerName", { required: true })}
           />
           {errors.officerName && <small className="text-danger text-xs">{errors.officerName.message}</small>}
@@ -123,12 +125,26 @@ const ReportOfficerForm = () => {
             id="officer-sia-number"
             type="text"
             disabled={status === "loading" || status === "submitted"}
-            className={`form-control pg-input shadow ${errors.address ? "is-invalid" : ""} ${status === "submitted" ? "opacity-7" : ""}`}
+            className={`form-control pg-input shadow ${errors.officerSiaNumber ? "is-invalid" : ""} ${
+              status === "submitted" ? "opacity-7" : ""
+            }`}
             {...register("officerSiaNumber")}
           />
-          {errors.officerSiaNumber !== "" ||
-            (errors.officerSiaNumber && <small className="text-danger text-xs">{errors.officerSiaNumber.message}</small>)}
+          {errors.officerSiaNumber && <small className="text-danger text-xs">{errors.officerSiaNumber.message}</small>}
         </div>
+      </div>
+      <div className="form-part col mb-3">
+        <label className="form-label" htmlFor="designation">
+          Your Designation
+        </label>
+        <input
+          id="designation"
+          type="text"
+          disabled={status === "loading" || status === "submitted"}
+          className={`form-control pg-input shadow ${errors.designation ? "is-invalid" : ""} ${status === "submitted" ? "opacity-7" : ""}`}
+          {...register("designation", { required: true })}
+        />
+        {errors.designation && <small className="text-danger text-xs">{errors.designation.message}</small>}
       </div>
       <div className="mb-3 d-none">
         <label className="form-label d-none" htmlFor="captcha">

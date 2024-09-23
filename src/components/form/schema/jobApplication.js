@@ -31,6 +31,7 @@ const jobApplicationSchema = z.object({
     .refine((value) => value === "I authorize" || value === "I do not authorize", { message: "Invalid authorization" }),
   physicallyFit: z.string().refine((value) => value === "I confirm" || value === "I don't confirm", { message: "Invalid value" }),
   medicalDetails: z.string(),
+  captcha: z.string(),
 });
 
 export default jobApplicationSchema;
