@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 const CrispProvider = ({ children, siteId }) => {
   useEffect(() => {
-    process.env.NODE_ENV === "development" && Crisp.configure(siteId);
+    Crisp.configure(siteId);
   }, [siteId]);
 
   return <>{children}</>;
