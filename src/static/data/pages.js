@@ -184,8 +184,8 @@ const data = [
           ],
         },
         ref: {
-          path: "",
-          text: "",
+          path: "Chat over WhatsApp",
+          text: "https://wa.me/447888105705?text=Hi,%20I%20am%20interested%20in%20your%20services.%20Can%20we%20talk?",
         },
       },
     ],

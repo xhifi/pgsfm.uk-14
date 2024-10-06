@@ -34,9 +34,17 @@ const NavigationHeader = ({ phone, brand, title, link }) => {
         >
           <i className="bi bi-instagram"></i>
         </Link>
-        <Link aria-label="Phone" className="ms-3 ms-md-0 btn btn-main text-white d-none d-md-inline-block" href={`tel:${phone}`}>
+        <Link aria-label="Phone" className="ms-3 me-1 ms-md-0 btn btn-main text-white d-none d-md-inline-block" href={`tel:${phone}`}>
           <i className="bi bi-telephone-fill me-2"></i>
           {phone}
+        </Link>
+        <Link
+          aria-label="Phone"
+          className="ms-3 ms-md-0 btn btn-main text-white d-none d-md-inline-block"
+          href={`https://wa.me/447888105705?text=Hi,%20I%20am%20interested%20in%20your%20services.%20Can%20we%20talk?`}
+        >
+          <i className="bi bi-whatsapp me-2"></i>
+          Chat over WhatsApp
         </Link>
       </div>
     </div>

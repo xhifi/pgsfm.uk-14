@@ -6,6 +6,7 @@ import { useState } from "react";
 import LoadingSpinner from "../LoadingSpinner";
 import submitFormAction from "@/actions/submitFormAction";
 import jobApplicationSchema from "./schema/jobApplication";
+import Link from "../Link";
 
 const ReportOfficerForm = () => {
   const [status, setStatus] = useState("idle");
@@ -622,12 +623,6 @@ const ReportOfficerForm = () => {
             {...register("captcha")}
           />
         </div>
-        <p className="h4">
-          Download the application form
-          <a href="/forms/complaint_form.pdf" target="_blank" rel="noreferrer" className="text-light ms-2">
-            by clicking here
-          </a>
-        </p>
 
         <button disabled={status === "loading" || status === "submitted"} className={`btn btn-light text-main shadow`} type="submit">
           {status === "loading" ? <LoadingSpinner /> : status === "submitted" ? "Submitted" : "Submit"}
@@ -635,6 +630,13 @@ const ReportOfficerForm = () => {
         {status === "submitted" && <span className="ms-4">Thank You!</span>}
         {status === "error" && <span className="text-danger ms-4">{errorMessage}</span>}
       </form>
+      <p className="mt-3 text-danger">
+        <span>If you have difficulty submitting above form download the application form</span>
+        <Link href="/forms/pgsfm-job-application.pdf" target="_blank" rel="noreferrer" className=" ms-1 me-1 inline-block">
+          <i>by clicking here.</i>
+        </Link>
+        <span>After filling out the form forward this form, to info@pgsfm.uk for evaluation.</span>
+      </p>
     </>
   );
 };
