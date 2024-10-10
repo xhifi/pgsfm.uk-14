@@ -28,7 +28,7 @@ const data = [
     title: "Quick Links",
     subjects: [
       {
-        link: "/about-us",
+        link: "/about",
         text: "Want to know more about us?",
       },
       {
