@@ -73,7 +73,7 @@ const data = [
         },
         link: {
           text: "About Us",
-          ref: "/about-us",
+          ref: "/about",
         },
       },
     ],
@@ -409,7 +409,7 @@ const data = [
           "We are currently providing with contracted cleaning services to numerous hospitals, schools, and corporate buildings. Our contracted cleaning services are tailored to meet the specific needs of offices, corporate buildings, and warehouses. We ensure a spotless and hygienic environment, promoting productivity and well-being for your employees and visitors.",
         link: {
           text: "About Us",
-          ref: "/about-us",
+          ref: "/about",
         },
       },
       {
