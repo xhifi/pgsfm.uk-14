@@ -4,7 +4,7 @@ import Slide3 from "@/static/images/slides/3.png";
 import FeatureSecurityGuard from "@/static/images/features/security-guard-uk.jpg";
 import FeatureSecurityGuard2 from "@/static/images/features/security-uk-2.jpg";
 import FeatureSecurityGuard3 from "@/static/images/features/security-uk.jpg";
-import ServiceUniformedSecurity from "@/static/images/features/portrait-male-security-guard-with-radio-station.jpg";
+import ServiceUniformedSecurity from "@/static/images/features/portrait-male-security-guard-with-radio.jpg";
 import ServicePhysicalSecurity2 from "@/static/images/features/physical-security.jpg";
 import ServicePhysicalSecurity from "@/static/images/features/physical-security.png";
 import ServiceCleaning from "@/static/images/features/cleaning.jpg";
