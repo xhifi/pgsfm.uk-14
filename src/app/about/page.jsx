@@ -48,11 +48,11 @@ const page = () => {
             <div className="col">
               <h3>Why Choose Us?</h3>
               <p>
-                Professional Guard Services Ltd. gives a quality service! Customer satisfaction is high on our agenda and we work hard at
-                building good relationships with the people we work with. Good communication ensures we know exactly what our customers
-                want, and our aim is to see satisfied customers and a confident delivery team.
+                PGSFM Ltd. gives a quality service! Customer satisfaction is high on our agenda and we work hard at building good
+                relationships with the people we work with. Good communication ensures we know exactly what our customers want, and our aim
+                is to see satisfied customers and a confident delivery team.
               </p>
-              <p>Professional Guard Services Ltd. recruits people who want to work and will go that extra mile to achieve.</p>
+              <p>PGSFM Ltd. recruits people who want to work and will go that extra mile to achieve.</p>
               <p>
                 Furthermore, our vision is to provide as transparent services as possible. As a result we will make sure that we charge you
                 no hidden fee or if there is any other fee, it be told you before it&apos;s payment, thus providing you with excellent

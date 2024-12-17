@@ -150,8 +150,8 @@ const ReportOfficerForm = () => {
           />
           {errors.email && <small className="text-danger text-xs">{errors.email.message}</small>}
         </div>
-        <div className="row row-cols-1 row-cols-md-2">
-          <div className="form-part col mb-3">
+        <div className="row row-cols-1">
+          {/* <div className="form-part col mb-3">
             <label className="form-label" htmlFor="dob">
               Date of Birth*
             </label>
@@ -165,7 +165,7 @@ const ReportOfficerForm = () => {
               {...register("dob", { required: true })}
             />
             {errors.dob && <small className="text-danger text-xs">{errors.dob.message}</small>}
-          </div>
+          </div> */}
           <div className="form-part col mb-3">
             <label className="form-label" htmlFor="jobrole">
               Role Applying for*

@@ -18,7 +18,7 @@ const data = [
     path: "/",
     icon: "house-fill",
     callToAction: {
-      title: "Welcome to Professional Guard Services Ltd.",
+      title: "Welcome to PGSFM Ltd.",
       description: "",
       content: [
         {
@@ -177,7 +177,7 @@ const data = [
         image: FeatureSecurityGuard3,
         orientation: "left",
         content: {
-          h: "Welcome to Professional Guard Services Ltd.",
+          h: "Welcome to PGSFM Ltd.",
           p: [
             "We are a privately owned and independent Security company based in the United Kingdom. We provide highly experienced SIA licensed security professionals throughout the United Kingdom. We are a team of reliable, dedicated and proud ambitions and offer a complete security guard services to our clients.",
             "We are experienced in providing security guard services to anyone for whatever reason and currently support to many industrial aspects including corporate sector, construction sites, private events as well as many industrial warehouses etc. Whether you need a temporary cover or long-term solution to your security needs, we help you to protect your lives, businesses and properties from crime.",
@@ -234,19 +234,19 @@ const data = [
           text: "Learn More",
         },
       },
-      {
-        heading: "CCTV Monitoring",
-        icon: "gear-wide-connected",
-        content: [
-          {
-            p: "Provided the equipment, we provide outstanding CCTV monitoring services to our clients with a team of professionals who are always on the lookout for any suspicious activity.",
-          },
-        ],
-        ref: {
-          path: "/",
-          text: "Learn More",
-        },
-      },
+      // {
+      //   heading: "CCTV Monitoring",
+      //   icon: "gear-wide-connected",
+      //   content: [
+      //     {
+      //       p: "Provided the equipment, we provide outstanding CCTV monitoring services to our clients with a team of professionals who are always on the lookout for any suspicious activity.",
+      //     },
+      //   ],
+      //   ref: {
+      //     path: "/",
+      //     text: "Learn More",
+      //   },
+      // },
       {
         heading: "Industrial / Warehouse Security",
         icon: "buildings-fill",
@@ -326,7 +326,7 @@ const data = [
       {
         heading: "Physical Security",
         image: ServicePhysicalSecurity,
-        list: ["Door Supervisors", "Corporate Protection & Security", "Static Guarding", "Immediate Response Team", "Event Security"],
+        list: ["Corporate Protection & Security", "Static Guarding", "Immediate Response Team", "Event Security"],
       },
       {
         heading: "Some Specialized Sectors",
