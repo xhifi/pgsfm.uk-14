@@ -1,6 +1,6 @@
 import Slide1 from "@/static/images/slides/1.png";
 import Slide2 from "@/static/images/slides/2.png";
-import Slide3 from "@/static/images/slides/3.png";
+import Slide3 from "@/static/images/slides/3_2.jpg";
 import FeatureSecurityGuard from "@/static/images/features/security-guard-uk.jpg";
 import FeatureSecurityGuard2 from "@/static/images/features/security-uk-2.jpg";
 import FeatureSecurityGuard3 from "@/static/images/features/security-uk.jpg";
