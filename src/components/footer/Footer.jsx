@@ -1,12 +1,14 @@
+import getPageData from "@/utils/getPageData";
 import Column from "./Column";
 import ContactColumn from "./ContactCol";
 
 const Footer = ({ data, contactData }) => {
+  const homeData = getPageData();
   return (
     <>
       <div className="container-fluid px-4 py-5 bg-dark site-footer">
         <div className="row">
-          <ContactColumn data={contactData} />
+          <ContactColumn data={contactData} certificates={homeData.callToAction.certificates} />
           {data.map((item, index) => {
             return <Column key={index} list={item.subjects} title={item.title} numOfCols={data.length} />;
           })}

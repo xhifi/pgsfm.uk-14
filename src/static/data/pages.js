@@ -11,6 +11,8 @@ import ServiceCleaning from "@/static/images/features/cleaning.jpg";
 import CleaningContractedCleaning from "@/static/images/slides/contracted-cleaning.jpg";
 import CleaningOnDemandCleaning from "@/static/images/slides/on-demand-cleaning.jpg";
 import CleaningOnSiteCleaning from "@/static/images/slides/on-site-cleaning.jpg";
+import SIA from "@/static/images/badges/sia.png";
+import ICO from "@/static/images/badges/ico.png";
 
 const data = [
   {
@@ -26,6 +28,20 @@ const data = [
         },
         {
           p: " We are experienced in providing security guard services to anyone for whatever reason and currently support to many industrial aspects including corporate sector, construction sites, private events as well as many industrial warehouses etc. Whether you need a temporary cover or long-term solution to your security needs, we help you to protect your lives, businesses and properties from crime.",
+        },
+      ],
+      certificates: [
+        {
+          title: "SIA Licensed",
+          image: SIA,
+          alt: "",
+          url: "",
+        },
+        {
+          title: "ICO Registered",
+          image: ICO,
+          alt: "",
+          url: "",
         },
       ],
     },

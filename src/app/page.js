@@ -16,7 +16,11 @@ export default function Home() {
   return (
     <main>
       <Slider data={homeData.slides} />
-      <CallToAction heading={homeData.callToAction.title} content={homeData.callToAction.content} />
+      <CallToAction
+        heading={homeData.callToAction.title}
+        content={homeData.callToAction.content}
+        certificates={homeData.callToAction.certificates}
+      />
       <Services data={servicesData.services} />
       <Features data={homeData.features} />
 
