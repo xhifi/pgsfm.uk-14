@@ -19,7 +19,7 @@ const CallToAction = ({ heading, content, certificates, refLink, refText }) => {
         <div className="d-flex justify-content-center align-items-center flex-wrap gap-2">
           {certificates.map((certificate, i) => {
             return (
-              <Link href="/" key={certificate.title} className="certificate" passHref>
+              <Link href={certificate.url} key={certificate.title} className="certificate" passHref>
                 <Image src={certificate.image} alt={certificate.title} quality={75} style={{ height: "120px", width: "auto" }} />
               </Link>
             );
