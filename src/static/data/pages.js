@@ -48,7 +48,7 @@ const data = [
     slides: [
       {
         image: Slide3,
-        title: "We are SIA Approved Security Contractors based and serving the whole United Kingdom",
+        title: "We are SIA Approved Security Contractors serving the whole United Kingdom",
         description:
           "We are a contractor and private company that provides security services to a wide range of industries. We are a team of reliable, dedicated and proud ambitions and offer a complete security guard services to our clients.",
         link: {
