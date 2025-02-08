@@ -6,6 +6,7 @@ const data = {
   logo: Brand,
   og: "/images/pgs-og.png",
   phone: "0800 0016 705",
+  phoneLocal: "020 8287 0974",
   email: "info@pgsfm.uk",
   whatsapp: {
     number: "44 788 8105 705",

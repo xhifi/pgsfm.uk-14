@@ -34,7 +34,11 @@ const ContactCol = ({ data, certificates }) => {
       </p>
       <p className="m-0">
         <i className="bi bi-telephone-fill me-2"></i>
-        {data.phone}
+        {data.phoneLocal}
+      </p>
+      <p className="m-0">
+        <i className="bi bi-telephone-fill me-2"></i>
+        {data.phone} &#40;TOLL FREE&#41;
       </p>
       <p className="m-0 decoration-none">
         <i className="bi bi-whatsapp me-2"></i>

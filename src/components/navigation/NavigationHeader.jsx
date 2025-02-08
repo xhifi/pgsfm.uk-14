@@ -2,7 +2,7 @@ import Link from "../Link";
 import Image from "next/image";
 import Brand from "@/static/images/brand.svg";
 
-const NavigationHeader = ({ phone, brand, title, link }) => {
+const NavigationHeader = ({ phone, phoneLocal, brand, title, link }) => {
   return (
     <div className="nav-header">
       <Link href={link} style={{ width: 300 }} passHref>
@@ -34,10 +34,18 @@ const NavigationHeader = ({ phone, brand, title, link }) => {
         >
           <i className="bi bi-instagram"></i>
         </Link>
-        <Link aria-label="Phone" className="ms-3 me-1 ms-md-0 btn btn-main text-white d-none d-md-inline-block" href={`tel:${phone}`}>
-          <i className="bi bi-telephone-fill me-2"></i>
-          {phone}
-        </Link>
+        {phone && (
+          <Link aria-label="Phone" className="ms-3 me-1 ms-md-0 btn btn-main text-white d-none d-md-inline-block" href={`tel:${phone}`}>
+            <i className="bi bi-telephone-fill me-2"></i>
+            {phone} &#40;TOLL FREE&#41;
+          </Link>
+        )}
+        {phoneLocal && (
+          <Link aria-label="Phone" className="ms-3 me-1 ms-md-0 btn btn-main text-white d-none d-md-inline-block" href={`tel:${phone}`}>
+            <i className="bi bi-telephone-fill me-2"></i>
+            {phoneLocal}
+          </Link>
+        )}
         <Link
           aria-label="Phone"
           className="ms-3 ms-md-0 btn btn-main text-white d-none d-md-inline-block"

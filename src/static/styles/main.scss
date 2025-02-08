@@ -68,10 +68,16 @@ body {
     align-items: center;
     justify-content: center;
     transform: scale(200%);
+    user-select: none;
+    pointer-events: none;
     img {
       transform: rotate(-15deg);
       filter: contrast(0.5) grayscale(100%) opacity(0.3);
     }
+  }
+  .content {
+    z-index: 1;
+    position: relative;
   }
 }
 
