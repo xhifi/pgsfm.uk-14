@@ -51,22 +51,22 @@ const data = [
         title: "We are SIA Approved Security Contractors serving the whole United Kingdom",
         description:
           "We are a contractor and private company that provides security services to a wide range of industries. We are a team of reliable, dedicated and proud ambitions and offer a complete security guard services to our clients.",
-        link: {
-          icon: "whatsapp",
-          text: "Chat over WhatsApp",
-          ref: "https://wa.me/447888105705?text=Hi,%20I%20am%20interested%20in%20your%20services.%20Can%20we%20talk?",
-        },
+        // link: {
+        //   icon: "whatsapp",
+        //   text: "Chat over WhatsApp",
+        //   ref: "https://wa.me/447888105705?text=Hi,%20I%20am%20interested%20in%20your%20services.%20Can%20we%20talk?",
+        // },
       },
       {
         image: Slide1,
         title: "Enabling You to Focus on Your Business",
         description:
           "While our guards stand watch over your property, you can focus on your business. We provide the best choice of reliable, effective and appropriate ways to meet your individual site requirements, risks and budgets.",
-        link: {
-          icon: "whatsapp",
-          text: "Chat over WhatsApp",
-          ref: "https://wa.me/447888105705?text=Hi,%20I%20am%20interested%20in%20your%20services.%20Can%20we%20talk?",
-        },
+        // link: {
+        //   icon: "whatsapp",
+        //   text: "Chat over WhatsApp",
+        //   ref: "https://wa.me/447888105705?text=Hi,%20I%20am%20interested%20in%20your%20services.%20Can%20we%20talk?",
+        // },
       },
       {
         image: Slide2,

@@ -24,7 +24,7 @@ const ContactFormSideBar = ({ siteData }) => {
             </a>
           </li>
         )}
-        <li>
+        {/* <li>
           <Link
             aria-label="Phone"
             className="ms-3 ms-md-0 text-white text-decoration-none d-none d-md-inline-block"
@@ -33,7 +33,7 @@ const ContactFormSideBar = ({ siteData }) => {
             <i className="bi bi-whatsapp me-2"></i>
             Chat over WhatsApp
           </Link>
-        </li>
+        </li> */}
 
         {email && (
           <li className="text-white">

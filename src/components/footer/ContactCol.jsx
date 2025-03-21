@@ -32,23 +32,29 @@ const ContactCol = ({ data, certificates }) => {
         <i className="bi bi-geo-alt-fill me-2"></i>
         {data.address}
       </p>
-      <p className="m-0">
-        <i className="bi bi-telephone-fill me-2"></i>
-        {data.phoneLocal}
-      </p>
-      <p className="m-0">
-        <i className="bi bi-telephone-fill me-2"></i>
-        {data.phone} &#40;TOLL FREE&#41;
-      </p>
-      <p className="m-0 decoration-none">
-        <i className="bi bi-whatsapp me-2"></i>
-        <Link
-          className="text-white text-decoration-none"
-          href={`https://wa.me/${data.whatsapp.number.replace(/\s/g, "")}?text=${data.whatsapp.message}`}
-        >
-          {"0" + data.whatsapp.number.substring(3)}
-        </Link>
-      </p>
+      {data.phoneLocal && (
+        <p className="m-0">
+          <i className="bi bi-telephone-fill me-2"></i>
+          {data.phoneLocal}
+        </p>
+      )}
+      {data.phone && (
+        <p className="m-0">
+          <i className="bi bi-telephone-fill me-2"></i>
+          {data.phone} &#40;TOLL FREE&#41;
+        </p>
+      )}
+      {data.whatsapp && (
+        <p className="m-0 decoration-none">
+          <i className="bi bi-whatsapp me-2"></i>
+          <Link
+            className="text-white text-decoration-none"
+            href={`https://wa.me/${data.whatsapp.number?.replace(/\s/g, "")}?text=${data.whatsapp.message}`}
+          >
+            {"0" + data.whatsapp.number?.substring(3)}
+          </Link>
+        </p>
+      )}
       <p className="m-0">
         <i className="bi bi-envelope-fill me-2"></i>
         {data.email}

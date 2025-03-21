@@ -29,10 +29,12 @@ const Slider = ({ data, center }) => {
                       <div className="col text-center">
                         <h1 className="">{slide.title}</h1>
                         <p className="text-xl">{slide.description}</p>
-                        <Link className="btn btn-main btn-lg shadow-lg" href={slide.link.ref}>
-                          {slide.link.icon && <i className={`me-2 bi bi-${slide.link.icon}`} />}
-                          {slide.link.text}
-                        </Link>
+                        {slide.link && (
+                          <Link className="btn btn-main btn-lg shadow-lg" href={slide.link.ref}>
+                            {slide.link.icon && <i className={`me-2 bi bi-${slide.link.icon}`} />}
+                            {slide.link.text}
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -42,10 +44,12 @@ const Slider = ({ data, center }) => {
                       <div className="col">
                         <h1 className="">{slide.title}</h1>
                         <p>{slide.description}</p>
-                        <Link className="btn btn-main btn-lg shadow-lg" href={slide.link.ref}>
-                          {slide.link.icon && <i className={`me-2 bi bi-${slide.link.icon}`} />}
-                          {slide.link.text}
-                        </Link>
+                        {slide.link && (
+                          <Link className="btn btn-main btn-lg shadow-lg" href={slide.link.ref}>
+                            {slide.link.icon && <i className={`me-2 bi bi-${slide.link.icon}`} />}
+                            {slide.link.text}
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </div>
